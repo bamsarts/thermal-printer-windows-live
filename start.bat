@@ -17,7 +17,7 @@ set /p printer=Enter Printer Name:
 echo %printer%
 echo %compName%
 
-curl http://indo-data.id:91/data/printer -F "ip=%ip%" -F "name=%printer%" -F "computer=%compName%"
+curl https://fo.baktikominfo.id/data/printer -F "ip=%ip%" -F "name=%printer%" -F "computer=%compName%"
 
 echo ""
 echo Apache 2 is starting ...
