@@ -15,11 +15,10 @@ try{
 
     $connector = new WindowsPrintConnector($printerName);
     $printer = new Printer($connector);
-
-    $printer -> qrCode("$qrData", Printer::QR_ECLEVEL_L, 10);
-
+    
     $printer -> feed();
     $printer -> setJustification(Printer::JUSTIFY_CENTER);
+    $printer -> qrCode("$qrData", Printer::QR_ECLEVEL_L, 10);
     $printer -> text("$qrData\n");
     $printer -> feed(2);
 
